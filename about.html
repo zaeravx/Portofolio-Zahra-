@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Zahra Portfolio</title>
+  <meta name="description" content="Tentang Zahra Fahira Rahman — UI/UX Designer & Front-End Developer" />
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/rensonsive.css" />
+  <style>
+    .page-header {
+      padding: 180px 0 100px;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header-orb {
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,146,124,0.08), transparent 70%);
+      top: -100px; right: -100px;
+      filter: blur(80px);
+    }
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border-subtle);
+      border: 1px solid var(--border-subtle);
+      margin-top: 60px;
+    }
+    .interest-item {
+      background: var(--bg-card);
+      padding: 32px 24px;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .interest-item:hover { background: var(--bg-card-hover); }
+    .interest-icon { font-size: 32px; margin-bottom: 12px; }
+    .interest-name {
+      font-family: var(--font-display);
+      font-size: 18px;
+      color: var(--text-primary);
+    }
+    .values-list { margin-top: 60px; }
+    .value-item {
+      display: flex; gap: 32px; align-items: flex-start;
+      padding: 40px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .value-item:first-child { border-top: 1px solid var(--border-subtle); }
+    .value-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--accent-primary);
+      min-width: 40px;
+      padding-top: 4px;
+    }
+    .value-title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .value-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 560px;
+    }
+    @media (max-width: 768px) {
+      .interests-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .interests-grid { grid-template-columns: 1fr 1fr; }
+      .value-item { flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Z<span>.</span>Portfolio</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="portofolio.html">Portfolio</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="exprience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Hire Me</a>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="page-header-orb"></div>
+    <div class="container">
+      <p class="section-label">About Me</p>
+      <h1 class="section-title" style="font-size: clamp(48px, 7vw, 96px);">Mengenal <em style="color:var(--accent-primary)">Zahra</em></h1>
+    </div>
+  </div>
+
+  <!-- About Detail -->
+  <section>
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrapper reveal">
+          <div class="about-img-frame" style="aspect-ratio:3/4;">
+            <div class="about-img-placeholder"><img src="/assets/img/profil/jara.jpeg" alt="Zahra Fahira Rahman"></div>
+          </div>
+          <div class="about-img-accent"></div>
+          <div class="about-img-label">Zahra Fahira Rahman</div>
+        </div>
+
+        <div class="about-content reveal reveal-delay-2">
+          <p class="section-label">Story</p>
+          <h2 class="section-title">Siapa Saya?</h2>
+          <p class="about-bio">
+            Halo! Saya <strong>Zahra Fahira Rahman</strong>, seorang <strong>siswa SMKN 4 Bandung yang memiliki ketertarikan di bidang UI/UX Designer dan pengembangan web</strong>
+          </p>
+          <p class="about-bio">
+            Perjalanan saya di dunia digital dimulai saat saya mulai tertarik mempelajari bagaimana sebuah website dibuat. Saya masih dalam proses belajar dan terus mengembangkan kemampuan di bidang ini. Saat ini, saya mempelajari Figma, HTML, CSS, dan JavaScript untuk front-end, serta mulai memahami dasar back-end menggunakan PHP dan MySQL. Saya juga mencoba membuat project sederhana untuk meningkatkan skill saya secara bertahap.
+          </p>
+
+          <div style="margin-top:40px; display:flex; gap:16px; flex-wrap:wrap;">
+            <a href="assets/Zahra_CV.pdf" class="btn-primary" download>Download CV</a>
+            <a href="contact.html" class="btn-secondary">Hubungi Saya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section style="background:var(--bg-secondary);">
+    <div class="container">
+      <p class="section-label reveal">What I Believe</p>
+      <h2 class="section-title reveal reveal-delay-1">Nilai-Nilai Saya</h2>
+
+      <div class="values-list">
+        <div class="value-item reveal">
+          <span class="value-num">01</span>
+          <div class="value-body">
+            <h3 class="value-title">Belajar Pemrograman</h3>
+            <p class="value-desc">Selain belajar dari pelajaran sekolah, saya juga belajar dari internet seperti YouTube dan website belajar coding untuk menambah pengetahuan di luar sekolah.</p>
+          </div>
+        </div>
+        <div class="value-item reveal reveal-delay-1">
+          <span class="value-num">02</span>
+          <div class="value-body">
+            <h3 class="value-title">Mengembangkan Skill Secara Bertahap</h3>
+            <p class="value-desc">Saya terus belajar dan mengembangkan kemampuan saya secara bertahap agar menjadi lebih baik di bidang IT.</p>
+          </div>
+        </div>
+        <div class="value-item reveal reveal-delay-1">
+          <span class="value-num">03</span>
+          <div class="value-body">
+            <h3 class="value-title">Problem Solving & AI-Assisted Development</h3>
+            <p class="value-desc">Saya menggabungkan kemampuan problem solving dengan bantuan AI untuk menciptakan solusi dengan lebih cepat, efisien, dan inovatif.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© <span data-year></span> <span>Zahra Fahira</span>.</p>
+        <ul class="footer-links">
+          <li><a href="portofolio.html">Portfolio</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

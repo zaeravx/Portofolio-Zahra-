@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience — Zahra Portfolio</title>
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/rensonsive.css" />
+  <style>
+    .page-header {
+      padding: 180px 0 100px;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .exp-layout {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 80px;
+      margin-top: 60px;
+    }
+    .exp-sidebar {}
+    .exp-filter-list { list-style: none; }
+    .exp-filter-list li {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .exp-filter-list li:first-child { border-top: 1px solid var(--border-subtle); }
+    .exp-filter-btn {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.2s;
+      padding: 0;
+    }
+    .exp-filter-btn.active, .exp-filter-btn:hover {
+      color: var(--accent-primary);
+    }
+    .edu-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 32px;
+      margin-bottom: 24px;
+      transition: var(--transition-smooth);
+    }
+    .edu-card:hover {
+      border-color: var(--border-medium);
+      background: var(--bg-card-hover);
+    }
+    .edu-period {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--accent-primary);
+      margin-bottom: 8px;
+    }
+    .edu-degree {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .edu-school {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+    .edu-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    @media (max-width: 768px) {
+      .exp-layout { grid-template-columns: 1fr; gap: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Z<span>.</span>Portfolio</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portofolio.html">Portfolio</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="exprience.html" class="active">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Hire Me</a>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <p class="section-label">Journey</p>
+      <h1 class="section-title" style="font-size: clamp(48px, 7vw, 96px);">Pengalaman &amp; <em style="color:var(--accent-primary)">Pendidikan</em></h1>
+    </div>
+  </div>
+
+  <!-- Experience Section -->
+  <section>
+    <div class="container">
+      <p class="section-label reveal">Work Experience</p>
+      <h2 class="section-title reveal reveal-delay-1">Perjalanan Karir</h2>
+
+      <div class="exp-layout">
+        <div class="exp-sidebar reveal">
+          <p style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.2em; color:var(--text-muted); margin-bottom:20px;">TIMELINE</p>
+          <ul class="exp-filter-list">
+            <li><button class="exp-filter-btn active">2024 — Now</button></li>
+            <li><button class="exp-filter-btn">2023 — 2024</button></li>
+            <li><button class="exp-filter-btn">2022 — 2023</button></li>
+            <li><button class="exp-filter-btn">2021 — 2022</button></li>
+          </ul>
+
+          <div style="margin-top:48px;">
+            <p style="font-family:var(--font-mono); font-size:10px; letter-spacing:0.2em; color:var(--text-muted); margin-bottom:12px;">QUICK STATS</p>
+            <div style="margin-bottom:16px;">
+              <div style="font-family:var(--font-display); font-size:36px; color:var(--text-primary);">3+</div>
+              <div style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted);">YEARS EXP.</div>
+            </div>
+            <div style="margin-bottom:16px;">
+              <div style="font-family:var(--font-display); font-size:36px; color:var(--text-primary);">5</div>
+              <div style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted);">COMPANIES</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline reveal reveal-delay-2">
+          <div class="timeline-item visible">
+            <div class="timeline-dot"></div>
+            <div class="timeline-period">2024 — Sekarang</div>
+            <div class="timeline-role">Senior UI/UX Designer</div>
+            <div class="timeline-company">PT. Kreatif Digital Indonesia · Full-time</div>
+            <div class="timeline-desc">
+              Memimpin tim desain dalam merancang ulang platform e-commerce dengan 500K+ pengguna aktif. Meningkatkan konversi sebesar 34% melalui redesign checkout flow dan optimasi UX mobile.
+            </div>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Figma</span>
+              <span class="timeline-tag">React</span>
+              <span class="timeline-tag">Design System</span>
+              <span class="timeline-tag">User Testing</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-period">2023 — 2024</div>
+            <div class="timeline-role">UI/UX Designer</div>
+            <div class="timeline-company">Startup Fintech Nusantara · Full-time</div>
+            <div class="timeline-desc">
+              Merancang pengalaman pengguna untuk aplikasi manajemen keuangan personal. Bertanggung jawab atas seluruh design flow dari onboarding hingga fitur investasi.
+            </div>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Mobile Design</span>
+              <span class="timeline-tag">Figma</span>
+              <span class="timeline-tag">Prototyping</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-period">2022 — 2023</div>
+            <div class="timeline-role">Front-End Developer</div>
+            <div class="timeline-company">Agency Web Bandung · Full-time</div>
+            <div class="timeline-desc">
+              Mengembangkan website dan landing page untuk berbagai klien lokal dan nasional menggunakan HTML, CSS, JavaScript, dan React. Fokus pada performa dan aksesibilitas.
+            </div>
+            <div class="timeline-tags">
+              <span class="timeline-tag">React</span>
+              <span class="timeline-tag">Tailwind</span>
+              <span class="timeline-tag">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-period">2021 — 2022</div>
+            <div class="timeline-role">UI Designer Intern</div>
+            <div class="timeline-company">Studio Digital Bandung · Internship</div>
+            <div class="timeline-desc">
+              Membantu tim desain dalam pembuatan aset visual, wireframe, dan mockup. Belajar langsung dari senior designer dalam proyek nyata.
+            </div>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Figma</span>
+              <span class="timeline-tag">Adobe XD</span>
+              <span class="timeline-tag">Illustrator</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section style="background: var(--bg-secondary);">
+    <div class="container">
+      <p class="section-label reveal">Education</p>
+      <h2 class="section-title reveal reveal-delay-1">Pendidikan</h2>
+
+      <div style="max-width:680px; margin-top:60px;">
+        <div class="edu-card reveal">
+          <div class="edu-period">2019 — 2023</div>
+          <div class="edu-degree">S1 Teknik Informatika</div>
+          <div class="edu-school">Universitas Komputer Indonesia (UNIKOM) · Bandung</div>
+          <div class="edu-desc">
+            Fokus pada pengembangan perangkat lunak dan desain antarmuka. Tugas akhir tentang "Penerapan User-Centered Design dalam Pengembangan Aplikasi Kesehatan Mental." IPK: 3.78/4.00
+          </div>
+        </div>
+
+        <div class="edu-card reveal reveal-delay-1">
+          <div class="edu-period">2021 — 2022</div>
+          <div class="edu-degree">Bangkit Academy</div>
+          <div class="edu-school">Google · Tokopedia · Gojek · Traveloka</div>
+          <div class="edu-desc">
+            Program intensif Machine Learning dan Cloud Computing. Salah satu dari 900 peserta terpilih dari seluruh Indonesia yang menyelesaikan program ini dengan predikat distinction.
+          </div>
+        </div>
+
+        <div class="edu-card reveal reveal-delay-2">
+          <div class="edu-period">2016 — 2019</div>
+          <div class="edu-degree">SMA Negeri 3 Bandung</div>
+          <div class="edu-school">Jurusan IPA · Bandung</div>
+          <div class="edu-desc">
+            Aktif di ekstrakurikuler desain grafis dan OSIS. Memenangkan lomba poster digital tingkat kota Bandung.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© <span data-year></span> <span>Zahra Fahira Rahman  </span>.</p>
+        <ul class="footer-links">
+          <li><a href="portofolio.html">Portfolio</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

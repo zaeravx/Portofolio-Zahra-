@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills — Zahra Portfolio</title>
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/rensonsive.css" />
+  <style>
+    .page-header {
+      padding: 180px 0 100px;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .tools-section { background: var(--bg-secondary); }
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1px;
+      background: var(--border-subtle);
+      border: 1px solid var(--border-subtle);
+      margin-top: 60px;
+    }
+    .tool-item {
+      background: var(--bg-card);
+      padding: 28px 20px;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .tool-item:hover { background: var(--bg-card-hover); }
+    .tool-icon { font-size: 32px; margin-bottom: 10px; }
+    .tool-name {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+    .skills-detailed {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-top: 60px;
+    }
+    .skill-category {}
+    .skill-category-title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .skill-row {
+      margin-bottom: 24px;
+    }
+    .skill-row-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .skill-row-name {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+    .skill-row-pct {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--accent-primary);
+    }
+    .skill-bar { height: 2px; background: var(--bg-secondary); overflow: hidden; }
+    .skill-bar-fill {
+      height: 100%;
+      background: var(--gradient-accent);
+      transform-origin: left;
+      transform: scaleX(0);
+      transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .skill-bar-fill.animated { transform: scaleX(1); }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+    .cert-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 28px;
+      transition: var(--transition-smooth);
+    }
+    .cert-card:hover {
+      border-color: var(--border-medium);
+      background: var(--bg-card-hover);
+    }
+    .cert-icon { font-size: 28px; margin-bottom: 16px; }
+    .cert-name {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .cert-issuer {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent-primary);
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .cert-year {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    @media (max-width: 768px) {
+      .skills-detailed { grid-template-columns: 1fr; gap: 48px; }
+      .tools-grid { grid-template-columns: repeat(3, 1fr); }
+      .cert-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .tools-grid { grid-template-columns: repeat(2, 1fr); }
+      .cert-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Z<span>.</span>Portfolio</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portofolio.html">Portfolio</a></li>
+        <li><a href="skills.html" class="active">Skills</a></li>
+        <li><a href="exprience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Hire Me</a>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <p class="section-label">Kemampuan</p>
+      <h1 class="section-title" style="font-size: clamp(48px, 7vw, 96px);">Skills &amp; <em style="color:var(--accent-primary)">Tools</em></h1>
+    </div>
+  </div>
+
+  <!-- Skills Detail -->
+  <section>
+    <div class="container">
+      <p class="section-label reveal">Proficiency</p>
+      <h2 class="section-title reveal reveal-delay-1">Tingkat Keahlian</h2>
+
+      <div class="skills-detailed">
+        <div class="skill-category reveal">
+          <h3 class="skill-category-title">🎨 Design</h3>
+          <div class="skill-row skill-item">
+            <div class="skill-row-top">
+              <span class="skill-row-name">UI/UX Design (Figma)</span>
+              <span class="skill-row-pct">92%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar-fill" style="width:92%"></div></div>
+          </div>
+          <div class="skill-row skill-item">
+            <div class="skill-row-top">
+              <span class="skill-row-name">User Research</span>
+              <span class="skill-row-pct">85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
+          </div>
+          <div class="skill-row skill-item">
+            <div class="skill-row-top">
+              <span class="skill-row-name">Prototyping</span>
+              <span class="skill-row-pct">88%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div>
+          </div>
+          <div class="skill-row skill-item">
+            <div class="skill-row-top">
+              <span class="skill-row-name">Branding & Identity</span>
+              <span class="skill-row-pct">78%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar-fill" style="width:78%"></div></div>
+          </div>
+          <div class="skill-row skill-item">
+            <div class="skill-row-top">
+              <span class="skill-row-name">Motion Design</span>
+              <span class="skill-row-pct">70%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar-fill" style="width:70%"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-2">
+          <h3 class="skill-category-title">💻 Development</h3>
+          <div class="skill-row skill-item">
+            <div class="skill-row-top">
+              <span class="skill-row-name">HTML & CSS</span>
+              <span class="skill-row-pct">95%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div>
+          </div>
+          <div class="skill-row skill-item">
+            <div class="skill-row-top">
+              <span class="skill-row-name">JavaScript</span>
+              <span class="skill-row-pct">82%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar-fill" style="width:82%"></div></div>
+          </div>
+          <div class="skill-row skill-item">
+            <div class="skill-row-top">
+              <span class="skill-row-name">React.js</span>
+              <span class="skill-row-pct">75%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
+          </div>
+          <div class="skill-row skill-item">
+            <div class="skill-row-top">
+              <span class="skill-row-name">Tailwind CSS</span>
+              <span class="skill-row-pct">88%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div>
+          </div>
+          <div class="skill-row skill-item">
+            <div class="skill-row-top">
+              <span class="skill-row-name">Git & Version Control</span>
+              <span class="skill-row-pct">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section class="tools-section">
+    <div class="container">
+      <p class="section-label reveal">Toolkit</p>
+      <h2 class="section-title reveal reveal-delay-1">Tools yang Saya Gunakan</h2>
+
+      <div class="tools-grid stagger-group">
+        <div class="tool-item reveal"><div class="tool-icon">🎨</div><div class="tool-name">Figma</div></div>
+        <div class="tool-item reveal reveal-delay-1"><div class="tool-icon">⚡</div><div class="tool-name">VS Code</div></div>
+        <div class="tool-item reveal reveal-delay-2"><div class="tool-icon">⚛️</div><div class="tool-name">React</div></div>
+        <div class="tool-item reveal reveal-delay-1"><div class="tool-icon">🐙</div><div class="tool-name">GitHub</div></div>
+        <div class="tool-item reveal reveal-delay-2"><div class="tool-icon">🎬</div><div class="tool-name">After Effects</div></div>
+        <div class="tool-item reveal reveal-delay-3"><div class="tool-icon">🖼️</div><div class="tool-name">Illustrator</div></div>
+        <div class="tool-item reveal"><div class="tool-icon">🎯</div><div class="tool-name">Notion</div></div>
+        <div class="tool-item reveal reveal-delay-1"><div class="tool-icon">☁️</div><div class="tool-name">Vercel</div></div>
+        <div class="tool-item reveal reveal-delay-2"><div class="tool-icon">🅰️</div><div class="tool-name">Framer</div></div>
+        <div class="tool-item reveal reveal-delay-1"><div class="tool-icon">📊</div><div class="tool-name">Miro</div></div>
+        <div class="tool-item reveal reveal-delay-2"><div class="tool-icon">🔷</div><div class="tool-name">TypeScript</div></div>
+        <div class="tool-item reveal reveal-delay-3"><div class="tool-icon">💨</div><div class="tool-name">Tailwind</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section>
+    <div class="container">
+      <p class="section-label reveal">Achievements</p>
+      <h2 class="section-title reveal reveal-delay-1">Sertifikasi</h2>
+
+      <div class="cert-grid stagger-group">
+        <div class="cert-card reveal">
+          <div class="cert-icon">🏆</div>
+          <div class="cert-name">Google UX Design Certificate</div>
+          <div class="cert-issuer">Google · Coursera</div>
+          <div class="cert-year">2023</div>
+        </div>
+        <div class="cert-card reveal reveal-delay-1">
+          <div class="cert-icon">🎓</div>
+          <div class="cert-name">Front-End Web Development</div>
+          <div class="cert-issuer">Dicoding Indonesia</div>
+          <div class="cert-year">2023</div>
+        </div>
+        <div class="cert-card reveal reveal-delay-2">
+          <div class="cert-icon">⭐</div>
+          <div class="cert-name">JavaScript Algorithms</div>
+          <div class="cert-issuer">freeCodeCamp</div>
+          <div class="cert-year">2022</div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">🎨</div>
+          <div class="cert-name">UI Design Fundamentals</div>
+          <div class="cert-issuer">Interaction Design Foundation</div>
+          <div class="cert-year">2022</div>
+        </div>
+        <div class="cert-card reveal reveal-delay-1">
+          <div class="cert-icon">📱</div>
+          <div class="cert-name">Mobile App Design</div>
+          <div class="cert-issuer">Figma · Community</div>
+          <div class="cert-year">2023</div>
+        </div>
+        <div class="cert-card reveal reveal-delay-2">
+          <div class="cert-icon">🔐</div>
+          <div class="cert-name">Web Accessibility (WCAG)</div>
+          <div class="cert-issuer">W3C · edX</div>
+          <div class="cert-year">2024</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© <span data-year></span> <span>Zahra Fahira Rahman</span>.</p>
+        <ul class="footer-links">
+          <li><a href="portofolio.html">Portfolio</a></li>
+          <li><a href="exprience.html">Experience</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

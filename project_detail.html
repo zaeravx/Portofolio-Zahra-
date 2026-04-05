@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Detail — Zahra Portfolio</title>
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/rensonsive.css" />
+  <style>
+    .project-hero {
+      min-height: 75vh;
+      display: flex; align-items: flex-end;
+      padding-bottom: 80px;
+      padding-top: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-hero-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, #0d0a10, #1a0f28, #0d0a10);
+      z-index: 0;
+    }
+    .project-hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(232,146,124,0.12), transparent 60%);
+    }
+    .project-hero-emoji {
+      position: absolute;
+      right: 10%; top: 50%;
+      transform: translateY(-50%);
+      font-size: 180px;
+      opacity: 0.15;
+      z-index: 1;
+    }
+    .project-hero-content {
+      position: relative; z-index: 2;
+      max-width: 800px;
+    }
+    .project-meta {
+      display: flex; gap: 48px; flex-wrap: wrap;
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .project-meta-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .project-meta-value { font-size: 15px; color: var(--text-primary); }
+    .project-content {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .project-content h2 {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin: 64px 0 20px;
+    }
+    .project-content p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.9;
+      margin-bottom: 16px;
+    }
+    .project-img-box {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 72px;
+      margin: 48px 0;
+    }
+    .project-img-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 48px 0;
+    }
+    .project-img-sm {
+      aspect-ratio: 4/3;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 48px;
+    }
+    .highlight-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--accent-primary);
+      padding: 28px 32px;
+      margin: 32px 0;
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border-subtle);
+      border: 1px solid var(--border-subtle);
+      margin: 48px 0;
+    }
+    .result-item {
+      background: var(--bg-card);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .result-num {
+      font-family: var(--font-display);
+      font-size: 42px;
+      color: var(--accent-primary);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .result-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+    }
+    .next-project {
+      background: var(--bg-secondary);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .nav-projects {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 48px;
+      padding-top: 48px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .nav-project-link {
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+    .nav-project-link:hover { opacity: 0.7; }
+    .nav-project-dir {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .nav-project-name {
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--text-primary);
+    }
+    @media (max-width: 768px) {
+      .project-meta { gap: 24px; }
+      .results-grid { grid-template-columns: 1fr; }
+      .project-img-grid { grid-template-columns: 1fr; }
+      .project-hero-emoji { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Z<span>.</span>Portfolio</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portofolio.html" class="active">Portfolio</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="exprience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Hire Me</a>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- Project Hero -->
+  <section class="project-hero">
+    <div class="project-hero-bg"></div>
+    <div class="project-hero-emoji">🛍️</div>
+    <div class="container project-hero-content">
+      <p class="section-label">Case Study</p>
+      <h1 style="font-family:var(--font-display); font-size: clamp(40px, 6vw, 80px); font-weight:300; color:var(--text-primary); line-height:1.1;">
+        Waruna<br /><em style="color:var(--accent-primary)">Marketplace</em>
+      </h1>
+      <p style="font-size:16px; color:var(--text-secondary); max-width:520px; margin-top:20px; line-height:1.8;">
+        Redesign platform marketplace lokal untuk meningkatkan pengalaman pengguna dan tingkat konversi.
+      </p>
+
+      <div class="project-meta">
+        <div>
+          <div class="project-meta-label">Role</div>
+          <div class="project-meta-value">UI/UX Designer</div>
+        </div>
+        <div>
+          <div class="project-meta-label">Duration</div>
+          <div class="project-meta-value">3 Bulan</div>
+        </div>
+        <div>
+          <div class="project-meta-label">Year</div>
+          <div class="project-meta-value">2024</div>
+        </div>
+        <div>
+          <div class="project-meta-label">Tools</div>
+          <div class="project-meta-value">Figma, Miro, Maze</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Content -->
+  <section>
+    <div class="container">
+      <div class="project-content">
+
+        <h2>Overview</h2>
+        <p>
+          Waruna adalah platform marketplace yang menghubungkan penjual dan pembeli produk lokal Indonesia. Meskipun memiliki basis pengguna yang besar, tingkat konversi mereka tergolong rendah dibandingkan kompetitor — hanya 2.1% dari total pengunjung yang menyelesaikan pembelian.
+        </p>
+        <p>
+          Saya ditugaskan untuk melakukan <strong style="color:var(--text-primary)">riset mendalam dan redesign menyeluruh</strong> terhadap pengalaman belanja, dengan fokus utama pada alur checkout dan pencarian produk.
+        </p>
+
+        <div class="project-img-box">🛍️</div>
+
+        <h2>Problem Statement</h2>
+        <p>
+          Melalui sesi user interview dengan 24 pengguna dan analisis data Hotjar selama 2 minggu, kami menemukan beberapa pain point utama:
+        </p>
+
+        <div class="highlight-box">
+          "Saya sering bingung harus mulai dari mana, terlalu banyak pilihan dan informasinya berantakan."
+          <br/><br/>
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--accent-primary);">— Pengguna, 27 tahun, Jakarta</span>
+        </div>
+
+        <p>Masalah utama yang teridentifikasi: navigasi yang tidak intuitif, proses checkout terlalu panjang (7 langkah), tidak ada personalisasi, dan kurangnya kepercayaan (trust signals) di halaman produk.</p>
+
+        <h2>Design Process</h2>
+        <p>
+          Saya menggunakan pendekatan <strong style="color:var(--text-primary)">Double Diamond</strong> — Discover, Define, Develop, Deliver — untuk memastikan solusi yang dihasilkan benar-benar berbasis data dan kebutuhan pengguna.
+        </p>
+
+        <div class="project-img-grid">
+          <div class="project-img-sm">🗺️<br/><span style="font-size:14px; color:var(--text-muted);">User Journey Map</span></div>
+          <div class="project-img-sm">📊<br/><span style="font-size:14px; color:var(--text-muted);">Affinity Diagram</span></div>
+          <div class="project-img-sm">✏️<br/><span style="font-size:14px; color:var(--text-muted);">Low-fi Wireframes</span></div>
+          <div class="project-img-sm">🎨<br/><span style="font-size:14px; color:var(--text-muted);">Hi-fi Prototype</span></div>
+        </div>
+
+        <h2>Solution</h2>
+        <p>
+          Saya merancang ulang seluruh pengalaman belanja dengan fokus pada tiga area utama: <strong style="color:var(--text-primary)">Discovery</strong> (memudahkan pengguna menemukan produk), <strong style="color:var(--text-primary)">Trust</strong> (membangun kepercayaan), dan <strong style="color:var(--text-primary)">Checkout</strong> (menyederhanakan proses pembelian dari 7 langkah menjadi 3 langkah).
+        </p>
+
+        <div class="project-img-box">🎨</div>
+
+        <h2>Results</h2>
+        <div class="results-grid">
+          <div class="result-item">
+            <div class="result-num">+34%</div>
+            <div class="result-label">Conversion Rate</div>
+          </div>
+          <div class="result-item">
+            <div class="result-num">-52%</div>
+            <div class="result-label">Cart Abandonment</div>
+          </div>
+          <div class="result-item">
+            <div class="result-num">4.7★</div>
+            <div class="result-label">User Satisfaction</div>
+          </div>
+        </div>
+
+        <p>
+          Setelah peluncuran redesign, Waruna berhasil meningkatkan konversi sebesar 34% dalam 60 hari pertama. Waktu rata-rata checkout berkurang dari 4 menit menjadi 90 detik, dan Net Promoter Score meningkat dari 32 menjadi 68.
+        </p>
+
+        <div class="nav-projects">
+          <a href="portofolio.html" class="nav-project-link">
+            <div class="nav-project-dir">← Kembali</div>
+            <div class="nav-project-name">Semua Proyek</div>
+          </a>
+          <a href="project_detail.html?id=2" class="nav-project-link" style="text-align:right;">
+            <div class="nav-project-dir">Proyek Berikutnya →</div>
+            <div class="nav-project-name">FinTrack App</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© <span data-year></span> <span>Zahra Fahira Rahman</span>.</p>
+        <ul class="footer-links">
+          <li><a href="portofolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

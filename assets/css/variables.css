@@ -1,0 +1,42 @@
+:root {
+  /* Colors */
+  --bg-primary: #050508;
+  --bg-secondary: #0d0d14;
+  --bg-card: #111119;
+  --bg-card-hover: #16161f;
+
+  --accent-primary: #e8927c;
+  --accent-secondary: #c97b6a;
+  --accent-glow: rgba(232, 146, 124, 0.15);
+  --accent-glow-strong: rgba(232, 146, 124, 0.3);
+
+  --text-primary: #f0ede8;
+  --text-secondary: #9e9b94;
+  --text-muted: #5c5a55;
+
+  --border-subtle: rgba(232, 146, 124, 0.12);
+  --border-medium: rgba(232, 146, 124, 0.25);
+  --border-strong: rgba(232, 146, 124, 0.5);
+
+  --gradient-hero: linear-gradient(135deg, #050508 0%, #0d0a10 50%, #050508 100%);
+  --gradient-accent: linear-gradient(135deg, #e8927c, #c97b6a);
+  --gradient-card: linear-gradient(145deg, #111119, #0d0d14);
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --section-padding: 120px 0;
+  --container-max: 1200px;
+  --nav-height: 80px;
+
+  /* Effects */
+  --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --shadow-accent: 0 0 40px rgba(232, 146, 124, 0.2);
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-fast: all 0.2s ease;
+  --border-radius: 2px;
+  --border-radius-lg: 6px;
+}

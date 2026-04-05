@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Zahra</title>
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/rensonsive.css" />
+  <style>
+    .page-header {
+      padding: 180px 0 100px;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Z<span>.</span>Portfolio</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portofolio.html" class="active">Portfolio</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="exprience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Hire Me</a>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <p class="section-label">Work</p>
+      <h1 class="section-title" style="font-size: clamp(48px, 7vw, 96px);">Semua <em style="color:var(--accent-primary)">Karya</em></h1>
+      <p class="section-subtitle" style="margin-top:16px;">Kumpulan proyek desain dan pengembangan yang pernah saya kerjakan.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <!-- Filter -->
+      <div class="portfolio-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
+        <button class="filter-btn" data-filter="frontend">Front-End</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+        <button class="filter-btn" data-filter="mobile">Mobile App</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="portfolio-grid">
+
+        <div class="portfolio-card visible" data-category="uiux">
+          <div class="portfolio-card-img">
+            <div class="portfolio-card-img-placeholder" style="background:linear-gradient(135deg,#1a0f2e,#2d1b4e);">🛍️</div>
+          </div>
+          <div class="portfolio-card-body">
+            <p class="portfolio-card-tag">UI/UX · E-Commerce</p>
+            <h3 class="portfolio-card-title">Waruna Marketplace</h3>
+            <p class="portfolio-card-desc">Redesign platform marketplace lokal dengan fokus pada kemudahan pencarian produk dan checkout flow yang lebih intuitif.</p>
+            <a href="project_detail.html?id=1" class="portfolio-card-link">Lihat Detail →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card visible" data-category="mobile">
+          <div class="portfolio-card-img">
+            <div class="portfolio-card-img-placeholder" style="background:linear-gradient(135deg,#0f1a2e,#1b2d4e);">📱</div>
+          </div>
+          <div class="portfolio-card-body">
+            <p class="portfolio-card-tag">Mobile · Finance</p>
+            <h3 class="portfolio-card-title">FinTrack App</h3>
+            <p class="portfolio-card-desc">Aplikasi manajemen keuangan personal dengan visualisasi data yang menarik dan fitur budget planning otomatis.</p>
+            <a href="project_detail.html?id=2" class="portfolio-card-link">Lihat Detail →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card visible" data-category="uiux">
+          <div class="portfolio-card-img">
+            <div class="portfolio-card-img-placeholder" style="background:linear-gradient(135deg,#0f2e1a,#1b4e2d);">🏥</div>
+          </div>
+          <div class="portfolio-card-body">
+            <p class="portfolio-card-tag">Dashboard · Health</p>
+            <h3 class="portfolio-card-title">MediCare Dashboard</h3>
+            <p class="portfolio-card-desc">Dashboard manajemen klinik dengan fitur appointment scheduling, rekam medis digital, dan laporan analitik.</p>
+            <a href="project_detail.html?id=3" class="portfolio-card-link">Lihat Detail →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-category="branding">
+          <div class="portfolio-card-img">
+            <div class="portfolio-card-img-placeholder" style="background:linear-gradient(135deg,#2e1a0f,#4e2d1b);">☕</div>
+          </div>
+          <div class="portfolio-card-body">
+            <p class="portfolio-card-tag">Branding · F&B</p>
+            <h3 class="portfolio-card-title">Kopi Nusantara</h3>
+            <p class="portfolio-card-desc">Identitas merek untuk kedai kopi premium lokal. Mencakup logo, color palette, tipografi, dan brand guidelines.</p>
+            <a href="project_detail.html?id=4" class="portfolio-card-link">Lihat Detail →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-category="frontend">
+          <div class="portfolio-card-img">
+            <div class="portfolio-card-img-placeholder" style="background:linear-gradient(135deg,#2e200f,#4e351b);">🏠</div>
+          </div>
+          <div class="portfolio-card-body">
+            <p class="portfolio-card-tag">Front-End · Real Estate</p>
+            <h3 class="portfolio-card-title">HomeFinder Landing</h3>
+            <p class="portfolio-card-desc">Landing page properti dengan animasi scroll yang halus, galeri interaktif, dan filter pencarian real-time.</p>
+            <a href="project_detail.html?id=5" class="portfolio-card-link">Lihat Detail →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-category="mobile">
+          <div class="portfolio-card-img">
+            <div class="portfolio-card-img-placeholder" style="background:linear-gradient(135deg,#2e0f1a,#4e1b2d);">🧘</div>
+          </div>
+          <div class="portfolio-card-body">
+            <p class="portfolio-card-tag">Mobile · Wellness</p>
+            <h3 class="portfolio-card-title">Tenang — Mindfulness App</h3>
+            <p class="portfolio-card-desc">Aplikasi meditasi dan kesehatan mental dengan UX yang menenangkan, guided meditation, dan mood tracker harian.</p>
+            <a href="project_detail.html?id=6" class="portfolio-card-link">Lihat Detail →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-category="uiux">
+          <div class="portfolio-card-img">
+            <div class="portfolio-card-img-placeholder" style="background:linear-gradient(135deg,#0f1a2e,#2e1a4e);">📚</div>
+          </div>
+          <div class="portfolio-card-body">
+            <p class="portfolio-card-tag">UI/UX · EdTech</p>
+            <h3 class="portfolio-card-title">Belajar Bareng Platform</h3>
+            <p class="portfolio-card-desc">Platform e-learning dengan fitur live class, quiz interaktif, dan sistem gamifikasi untuk meningkatkan engagement.</p>
+            <a href="project_detail.html?id=7" class="portfolio-card-link">Lihat Detail →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-category="frontend">
+          <div class="portfolio-card-img">
+            <div class="portfolio-card-img-placeholder" style="background:linear-gradient(135deg,#1a2e0f,#2d4e1b);">🌱</div>
+          </div>
+          <div class="portfolio-card-body">
+            <p class="portfolio-card-tag">Front-End · Sustainability</p>
+            <h3 class="portfolio-card-title">GreenLife Website</h3>
+            <p class="portfolio-card-desc">Website organisasi lingkungan hidup dengan desain organik, micro-animations, dan CMS terintegrasi.</p>
+            <a href="project_detail.html?id=8" class="portfolio-card-link">Lihat Detail →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-category="branding">
+          <div class="portfolio-card-img">
+            <div class="portfolio-card-img-placeholder" style="background:linear-gradient(135deg,#2e2e0f,#4e4e1b);">✨</div>
+          </div>
+          <div class="portfolio-card-body">
+            <p class="portfolio-card-tag">Branding · Beauty</p>
+            <h3 class="portfolio-card-title">Aura Beauty Brand</h3>
+            <p class="portfolio-card-desc">Identitas visual untuk brand skincare lokal. Menekankan keanggunan, alam, dan kemurnian bahan-bahan alami.</p>
+            <a href="project_detail.html?id=9" class="portfolio-card-link">Lihat Detail →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--bg-secondary); text-align:center;">
+    <div class="container">
+      <p class="section-label reveal" style="justify-content:center;">Let's Collaborate</p>
+      <h2 class="section-title reveal reveal-delay-1">Punya Proyek?<br /><em style="color:var(--accent-primary)">Mari Bekerja Sama.</em></h2>
+      <p class="section-subtitle reveal reveal-delay-2" style="margin: 0 auto 40px; text-align:center; max-width:400px;">Saya selalu terbuka untuk proyek menarik dan kolaborasi kreatif.</p>
+      <div class="reveal reveal-delay-3">
+        <a href="contact.html" class="btn-primary">Hubungi Saya</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© <span data-year></span> <span>Zahra Fahira Rahman</span>.</p>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
