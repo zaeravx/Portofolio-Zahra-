@@ -79,6 +79,84 @@
     @media (max-width: 768px) {
       .exp-layout { grid-template-columns: 1fr; gap: 48px; }
     }
+    .org-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+    }
+    .org-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      transition: var(--transition-smooth);
+    }
+    .org-card:hover {
+      border-color: var(--border-medium);
+      background: var(--bg-card-hover);
+    }
+    .org-card:hover .org-photo img {
+      transform: scale(1.04);
+    }
+    .org-photo {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: var(--bg-tertiary);
+    }
+    .org-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .org-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.35) 0%, transparent 60%);
+    }
+    .org-body {
+      padding: 24px 28px 28px;
+    }
+    .org-tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-primary);
+      margin-bottom: 8px;
+    }
+    .org-role {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .org-place {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+    .org-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .org-period {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    @media (max-width: 768px) {
+      .org-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -92,7 +170,6 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="portofolio.html">Portfolio</a></li>
-        <li><a href="skills.html">Skills</a></li>
         <li><a href="exprience.html" class="active">Experience</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -108,101 +185,6 @@
     </div>
   </div>
 
-  <!-- Experience Section -->
-  <section>
-    <div class="container">
-      <p class="section-label reveal">Work Experience</p>
-      <h2 class="section-title reveal reveal-delay-1">Perjalanan Karir</h2>
-
-      <div class="exp-layout">
-        <div class="exp-sidebar reveal">
-          <p style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.2em; color:var(--text-muted); margin-bottom:20px;">TIMELINE</p>
-          <ul class="exp-filter-list">
-            <li><button class="exp-filter-btn active">2024 — Now</button></li>
-            <li><button class="exp-filter-btn">2023 — 2024</button></li>
-            <li><button class="exp-filter-btn">2022 — 2023</button></li>
-            <li><button class="exp-filter-btn">2021 — 2022</button></li>
-          </ul>
-
-          <div style="margin-top:48px;">
-            <p style="font-family:var(--font-mono); font-size:10px; letter-spacing:0.2em; color:var(--text-muted); margin-bottom:12px;">QUICK STATS</p>
-            <div style="margin-bottom:16px;">
-              <div style="font-family:var(--font-display); font-size:36px; color:var(--text-primary);">3+</div>
-              <div style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted);">YEARS EXP.</div>
-            </div>
-            <div style="margin-bottom:16px;">
-              <div style="font-family:var(--font-display); font-size:36px; color:var(--text-primary);">5</div>
-              <div style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted);">COMPANIES</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline reveal reveal-delay-2">
-          <div class="timeline-item visible">
-            <div class="timeline-dot"></div>
-            <div class="timeline-period">2024 — Sekarang</div>
-            <div class="timeline-role">Senior UI/UX Designer</div>
-            <div class="timeline-company">PT. Kreatif Digital Indonesia · Full-time</div>
-            <div class="timeline-desc">
-              Memimpin tim desain dalam merancang ulang platform e-commerce dengan 500K+ pengguna aktif. Meningkatkan konversi sebesar 34% melalui redesign checkout flow dan optimasi UX mobile.
-            </div>
-            <div class="timeline-tags">
-              <span class="timeline-tag">Figma</span>
-              <span class="timeline-tag">React</span>
-              <span class="timeline-tag">Design System</span>
-              <span class="timeline-tag">User Testing</span>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-period">2023 — 2024</div>
-            <div class="timeline-role">UI/UX Designer</div>
-            <div class="timeline-company">Startup Fintech Nusantara · Full-time</div>
-            <div class="timeline-desc">
-              Merancang pengalaman pengguna untuk aplikasi manajemen keuangan personal. Bertanggung jawab atas seluruh design flow dari onboarding hingga fitur investasi.
-            </div>
-            <div class="timeline-tags">
-              <span class="timeline-tag">Mobile Design</span>
-              <span class="timeline-tag">Figma</span>
-              <span class="timeline-tag">Prototyping</span>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-period">2022 — 2023</div>
-            <div class="timeline-role">Front-End Developer</div>
-            <div class="timeline-company">Agency Web Bandung · Full-time</div>
-            <div class="timeline-desc">
-              Mengembangkan website dan landing page untuk berbagai klien lokal dan nasional menggunakan HTML, CSS, JavaScript, dan React. Fokus pada performa dan aksesibilitas.
-            </div>
-            <div class="timeline-tags">
-              <span class="timeline-tag">React</span>
-              <span class="timeline-tag">Tailwind</span>
-              <span class="timeline-tag">JavaScript</span>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-period">2021 — 2022</div>
-            <div class="timeline-role">UI Designer Intern</div>
-            <div class="timeline-company">Studio Digital Bandung · Internship</div>
-            <div class="timeline-desc">
-              Membantu tim desain dalam pembuatan aset visual, wireframe, dan mockup. Belajar langsung dari senior designer dalam proyek nyata.
-            </div>
-            <div class="timeline-tags">
-              <span class="timeline-tag">Figma</span>
-              <span class="timeline-tag">Adobe XD</span>
-              <span class="timeline-tag">Illustrator</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Education -->
   <section style="background: var(--bg-secondary);">
     <div class="container">
@@ -211,34 +193,102 @@
 
       <div style="max-width:680px; margin-top:60px;">
         <div class="edu-card reveal">
-          <div class="edu-period">2019 — 2023</div>
-          <div class="edu-degree">S1 Teknik Informatika</div>
-          <div class="edu-school">Universitas Komputer Indonesia (UNIKOM) · Bandung</div>
+          <div class="edu-period">2021 - 2024</div>
+          <div class="edu-degree">SMPN 48 Bandung</div>
+          <div class="edu-school">Mengikuti program pendidikan menengah pertama</div>
           <div class="edu-desc">
-            Fokus pada pengembangan perangkat lunak dan desain antarmuka. Tugas akhir tentang "Penerapan User-Centered Design dalam Pengembangan Aplikasi Kesehatan Mental." IPK: 3.78/4.00
+            Fokus pada pembelajaran umum dengan beberapa kegiatan ekstrakurikuler seperti pramuka. Membangun dasar pengetahuan yang kuat untuk pendidikan selanjutnya.
           </div>
         </div>
 
         <div class="edu-card reveal reveal-delay-1">
-          <div class="edu-period">2021 — 2022</div>
-          <div class="edu-degree">Bangkit Academy</div>
-          <div class="edu-school">Google · Tokopedia · Gojek · Traveloka</div>
+          <div class="edu-period">2024 — Sekarang</div>
+          <div class="edu-degree">SMKN 4 Bandung</div>
+          <div class="edu-school">Mengikuti kejuruan Rekayasa Perangkat Lunak</div>
           <div class="edu-desc">
-            Program intensif Machine Learning dan Cloud Computing. Salah satu dari 900 peserta terpilih dari seluruh Indonesia yang menyelesaikan program ini dengan predikat distinction.
+            Mendalami bidang pengembangan perangkat lunak dengan fokus pada pemrograman dan pengembangan web. Mengikuti kegiatan organisasi dan proyek yang berkaitan dengan teknologi.
           </div>
         </div>
 
-        <div class="edu-card reveal reveal-delay-2">
-          <div class="edu-period">2016 — 2019</div>
-          <div class="edu-degree">SMA Negeri 3 Bandung</div>
-          <div class="edu-school">Jurusan IPA · Bandung</div>
-          <div class="edu-desc">
-            Aktif di ekstrakurikuler desain grafis dan OSIS. Memenangkan lomba poster digital tingkat kota Bandung.
-          </div>
-        </div>
       </div>
     </div>
   </section>
+
+  <!-- Organization Experience -->
+<section style="background: var(--bg-primary);">
+  <div class="container">
+    <p class="section-label reveal">Organizations</p>
+    <h2 class="section-title reveal reveal-delay-1">Pengalaman Organisasi</h2>
+
+    <div class="org-grid">
+
+      <div class="org-card reveal">
+        <div class="org-photo">
+          <img src="assets/img/org-osis.jpg" alt="Pramuka SMPN 48" />
+          <div class="org-photo-overlay"></div>
+        </div>
+        <div class="org-body">
+          <div class="org-tag">Pramuka</div>
+          <div class="org-role">Anggota Pramuka</div>
+          <div class="org-place">SMPN 48 Bandung</div>
+          <div class="org-desc">
+            Terlibat aktif dalam kegiatan sekolah seperti pramuka, mengikuti berbagai kegiatan luar sekolah, dan berkontribusi dalam kegiatan sosial di lingkungan sekitar.
+          </div>
+          <div class="org-period">2021 — 2024</div>
+        </div>
+      </div>
+
+      <div class="org-card reveal reveal-delay-1">
+        <div class="org-photo">
+          <img src="assets/img/org-pramuka.jpg" alt="Pengibaran dan Penurunan Bendera Konferensi Asia Afrika" />
+          <div class="org-photo-overlay"></div>
+        </div>
+        <div class="org-body">
+          <div class="org-tag">Pramuka</div>
+          <div class="org-role">Pengibaran dan Penurunan Bendera Konferensi Asia Afrika</div>
+          <div class="org-place">SMPN 48 Bandung</div>
+          <div class="org-desc">
+            Berpartisipasi dalam kegiatan pengibaran dan penurunan bendera pada acara peringatan Konferensi Asia Afrika di Bandung.
+          </div>
+          <div class="org-period">2023</div>
+        </div>
+      </div>
+
+      <div class="org-card reveal reveal-delay-2">
+        <div class="org-photo">
+          <img src="assets/img/org-rpl.jpg" alt="Kegiatan Jambore se Kota Bandung" />
+          <div class="org-photo-overlay"></div>
+        </div>
+        <div class="org-body">
+          <div class="org-tag">Pramuka</div>
+          <div class="org-role">Kegiatan Jambore se Kota Bandung</div>
+          <div class="org-place">SMPN 48 Bandung</div>
+          <div class="org-desc">
+            Mengikuti kegiatan Jambore se Kota Bandung yang diadakan oleh Kwartir Cabang Bandung, berpartisipasi dalam berbagai kegiatan pramuka dan pengembangan diri.
+          </div>
+          <div class="org-period">2023</div>
+        </div>
+      </div>
+
+      <div class="org-card reveal reveal-delay-3">
+        <div class="org-photo">
+          <img src="assets/img/org-panitia.jpg" alt="Paskibra SMKN 4 Bandung" />
+          <div class="org-photo-overlay"></div>
+        </div>
+        <div class="org-body">
+          <div class="org-tag">Paskibra</div>
+          <div class="org-role">Anggota Paskibra</div>
+          <div class="org-place">SMKN 4 Bandung</div>
+          <div class="org-desc">
+            Berpartisipasi dalam kegiatan paskibra sekolah, berkontribusi dalam latihan dan persiapan upacara bendera, serta terlibat dalam berbagai kegiatan sekolah dan luar sekolah yang berkaitan dengan paskibra.
+          </div>
+          <div class="org-period">2024 - Sekarang</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <footer>
     <div class="container">
@@ -246,7 +296,6 @@
         <p class="footer-copy">© <span data-year></span> <span>Zahra Fahira Rahman  </span>.</p>
         <ul class="footer-links">
           <li><a href="portofolio.html">Portfolio</a></li>
-          <li><a href="skills.html">Skills</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
