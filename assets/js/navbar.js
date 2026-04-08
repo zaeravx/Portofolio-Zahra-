@@ -1,5 +1,9 @@
-// navbar.js — Navigation behavior
+const link = document.createElement('link');
+link.rel = 'icon';
+link.href = '/assets/img/icon/Z.jpeg';
+document.head.appendChild(link);
 
+// navbar.js — Navigation behavior
 (function () {
   const nav = document.querySelector('nav');
   const hamburger = document.querySelector('.hamburger');
